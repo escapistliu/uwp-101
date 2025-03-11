@@ -2,18 +2,14 @@
 
 This repository provides an in-depth guide to understanding concurrency in the Go programming language. It covers core concepts, detailed features, and practical examples, making it a valuable resource for developers—especially computer science students—looking to master Go's concurrency model for efficient, scalable applications.
 
-## See Also
-[Software licence](https://opensource.org/license/mit)
-
 ## Setup 🛠️
 1. [Install Go](https://go.dev/dl/)
-2. In your own Go package, import sexpr package
-   ```
-   import (
-  	"your_path_to_package/sexpr"
-    )
-   ```
-
+2. Initialize a Go Module: Set up a new project with:
+```
+go mod init concurrency-example
+```
+3. Imports: Use standard libraries like "sync", "time", or "context" as needed in your code.
+   
 ## Concepts 🔗
 Concurrency in Go is built around the following fundamental ideas:
 
@@ -212,8 +208,8 @@ For further learning, check out:
 - [Go by Example: Concurrency](https://gobyexample.com/goroutines)
 - [Effective Go](https://go.dev/doc/effective_go)
 
-
-
+## License 📜
+This guide is released under the [MIT License](https://opensource.org/license/mit)
 
 
 
