@@ -1,14 +1,6 @@
 # Concurrency in Go Language 🚀
 
 This repository provides an in-depth guide to understanding concurrency in the Go programming language. It covers core concepts, detailed features, and practical examples, making it a valuable resource for developers—especially computer science students—looking to master Go's concurrency model for efficient, scalable applications.
-
-## Setup 🛠️
-1. [Install Go](https://go.dev/dl/)
-2. Initialize a Go Module: Set up a new project with:
-```
-go mod init concurrency-example
-```
-3. Imports: Use standard libraries like "sync", "time", or "context" as needed in your code.
    
 ## Concepts 🔗
 Concurrency in Go is built around the following fundamental ideas:
@@ -43,6 +35,14 @@ These concepts are orchestrated by the Go runtime, which handles scheduling and 
 - **Scheduler**: Maps goroutines to OS threads efficiently.
 - **GOMAXPROCS**: Configures the number of OS threads for parallelism (set via runtime.GOMAXPROCS).
 
+## Setup 🛠️
+1. [Install Go](https://go.dev/dl/)
+2. Initialize a Go Module: Set up a new project with:
+```
+go mod init concurrency-example
+```
+3. Imports: Use standard libraries like "sync", "time", or "context" as needed in your code.
+   
 ## Examples 📝
 Here are practical, runnable code snippets showcasing Go’s concurrency features.
 
