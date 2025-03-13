@@ -5,35 +5,35 @@ This repository provides an in-depth guide to understanding concurrency in the G
 ## Concepts 🔗
 Concurrency in Go is built around the following fundamental ideas:
 
-- **Goroutines**: Lightweight threads managed by the Go runtime for concurrent execution.
-- **Channels**: Typed communication pipes that synchronize and pass data between goroutines.
-- **Select Statement**: A mechanism to handle multiple channel operations at once.
-- **Synchronization Primitives**: Tools like mutexes and wait groups to manage shared resources.
+- ***Goroutines***: Lightweight threads managed by the Go runtime for concurrent execution.
+- ***Channels***: Typed communication pipes that synchronize and pass data between goroutines.
+- ***Select Statement***: A mechanism to handle multiple channel operations at once.
+- ***Synchronization Primitives***: Tools like mutexes and wait groups to manage shared resources.
 These concepts are orchestrated by the Go runtime, which handles scheduling and execution behind the scenes.
 
 ## Features 📚
 ### Goroutines
-- **Lightweight**: Created and managed by the Go runtime, not the OS, with low overhead.
-- **Dynamic Stack**: Starts with a small stack (e.g., 2 KB) that grows as needed.
-- **Syntax**: Use the go keyword to launch a function concurrently.
+- ***Lightweight***: Created and managed by the Go runtime, not the OS, with low overhead.
+- ***Dynamic Stack***: Starts with a small stack (e.g., 2 KB) that grows as needed.
+- ***Syntax***: Use the go keyword to launch a function concurrently.
 
 ### Channels
-- **Typed**: Channels specify the data type they carry (e.g., chan int).
-- **Blocking**: Send and receive operations synchronize goroutines naturally.
-- **Safe**: Prevents race conditions by avoiding shared memory access.
+- ***Typed***: Channels specify the data type they carry (e.g., chan int).
+- ***Blocking***: Send and receive operations synchronize goroutines naturally.
+- ***Safe***: Prevents race conditions by avoiding shared memory access.
 
 ### Select Statement
-- **Multiplexing**: Waits on multiple channel operations, executing the first ready one.
-- **Default Case**: Optional non-blocking behavior with a default clause.
-- **Timeouts**: Pair with time.After for time-limited waits.
+- ***Multiplexing***: Waits on multiple channel operations, executing the first ready one.
+- ***Default Case***: Optional non-blocking behavior with a default clause.
+- ***Timeouts***: Pair with time.After for time-limited waits.
 
 ### Synchronization Primitives
-- **Mutexes**: sync.Mutex locks shared resources to prevent concurrent modification.
-- **WaitGroups**: sync.WaitGroup ensures all goroutines complete before proceeding.
+- ***Mutexes***: sync.Mutex locks shared resources to prevent concurrent modification.
+- ***WaitGroups***: sync.WaitGroup ensures all goroutines complete before proceeding.
 
 ### Go Runtime
-- **Scheduler**: Maps goroutines to OS threads efficiently.
-- **GOMAXPROCS**: Configures the number of OS threads for parallelism (set via runtime.GOMAXPROCS).
+- ***Scheduler***: Maps goroutines to OS threads efficiently.
+- ***GOMAXPROCS***: Configures the number of OS threads for parallelism (set via runtime.GOMAXPROCS).
 
 ## Setup 🛠️
 1. [Install Go](https://go.dev/dl/)
@@ -261,10 +261,10 @@ Task canceled: context deadline exceeded
 ```
 
 ## Best Practices 💡
-- **Use Channels**: Prefer channels over shared memory for communication.
-- **Keep It Simple**: Leverage goroutines and channels for clean, modular code.
-- **Limit Mutexes**: Use sync.Mutex only when necessary to avoid complexity.
-- **Avoid Leaks**: Ensure goroutines terminate (e.g., close channels or use context).
+- ***Use Channels***: Prefer channels over shared memory for communication.
+- ***Keep It Simple***: Leverage goroutines and channels for clean, modular code.
+- ***Limit Mutexes***: Use sync.Mutex only when necessary to avoid complexity.
+- ***Avoid Leaks***: Ensure goroutines terminate (e.g., close channels or use context).
 
 ## Real-World Use Cases 🌍
 ### Web Servers 🌐
